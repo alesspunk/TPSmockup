@@ -19,7 +19,7 @@
 
     <!--  CSS for Demo Purpose, don't include it in your project     -->
     <link href="../assets/css/demo.css" rel="stylesheet" />
-
+  <link rel="stylesheet" href="css/style.css">
 
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
@@ -30,7 +30,7 @@
 	<!--     Tooltip Menu     -->
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
- 
+
 
 
 
@@ -233,8 +233,7 @@ TPS SOFTWARE
 			</div>
 		</div>
 	</nav>
-
-
+   
 
     <div class="main-panel">
        
@@ -243,102 +242,47 @@ TPS SOFTWARE
             <div class="container-fluid" style="padding: 0px;">
 
 
-               <div id="wrapper" >
-        <div id="sidebar-wrapper" style="background-color:white">
+               <div id="wrapper"  >
+	           
+        <div id="sidebar-wrapper" style="background-color:white;" id="resizable" >
 	 
 	 
-						<div class="nav-container" style="margin-left: -25px;">
-                            <ul role="tablist" >
-                               <li class="active" style="display: inline-block;float: left;padding-top: 15px;">
-                                    <a rel="tooltip" role="tab" data-toggle="tab" data-placement="bottom" title="Quick Bill"  href="#quickbill" class="button">
-	                                    <i class="fa fa-edit"></i>
-	                                </a>
-                                  </li>
-                                <li style="display: inline-block;float: left;padding-top: 15px;">
-                                    <a rel="tooltip" role="tab" data-toggle="tab" data-placement="bottom" title="Detail Bill"  href="#detail-bill" class="button">
-	                                    <i class="fa fa-file-text"></i>
-	                                </a>
-                                  </li>
-                                <li style="display: inline-block;float: left;padding-top: 15px;">
-                                    <a rel="tooltip" role="tab" data-toggle="tab" data-placement="bottom" title="Progress Bill" href="#progress-bill" class="button">
-	                                    <i class="fa fa-ellipsis-h"></i>
-	                                </a>
-                                </li>
-                                <li style="display: inline-block;float: left;padding-top: 15px;">
-                                     <a rel="tooltip" data-placement="bottom"  title="Billing Paragraphs" role="tab" data-toggle="tab"  href="#b-paragraphs" class="button">
-	                                     <i class="fa fa-list"></i>
-	                                 </a>
-                                </li>
-                                <li style="display: inline-block;float: left;padding-top: 15px;">
-                                   <a rel="tooltip" role="tab" data-toggle="tab" data-placement="bottom"  title="Last 36 Months" href="#last-36" class="button">
-	                                   <i class="fa fa-calendar"></i>
-	                               </a>
-                                </li>
-                                
-                            </ul>
-                             
-                             <div style="padding-top: 15px;padding-right: 5px;display: inline-block;float: right;">
-
-							 		<a rel="tooltip" data-placement="bottom"  title="Close" href="#menu-toggle" id="toggle-close" class="button right">
-							 			<i class="fa fa-close"></i>
-							 		</a>
-	 						</div> 
-	 	
-                        </div> <!-- nav container -->
+					
                         
                         
 	 
-<br><br>
+  <div id="contenido" style="z-index: 1000;"> </div>
 	
 
-   <div class="tab-content">  <!-- tab content -->
-	   
+   <div class="tab-content" hidden>  <!-- tab content -->
+	    <div id="handle"></div> 	
 	   	 <!-- tab 1 -->
-        <div class="tab-pane active" id="quickbill" style="padding-left: 15px;padding-right: 15px;">
+        <div class="tab-pane active" id="quickbill" style="padding-left: 10px;padding-right: 10px;">
 	        
                       
    <div class="col-md-12">
             <div class="container-fluid">
-	            <br>
+	      
 	            
 	            
 	            
-	            <div class="alert alert-info rounded">
-                                    <button type="button" aria-hidden="true" class="close">×</button>
-                                    <span><b> Current billed: </b> $1,324.56 - <b> YTD billed: </b> $1,324.56 - <b> Last month billed: </b> $1,324.56 - <b> Last year billed: </b> $1,324.56 - <b> Current a/r: </b> $1,324.56 </span>
-                                </div>
-	            	
+	            	            	
                                 <form method="get" action="/" class="form-horizontal">
 
                     
 
 
                                     <fieldset>
-		                                 <legend class="title">Quick Bill     <span class="text-muted">- Banana Rep</span> </legend>
+		                                 <legend>Quick Bill<span class="text-muted">- Armano</span> </legend>
                            
                                 
 		                                <div class="col-sm-12">
                                             <div class="row">
 		                                
-			                                    <div class="col-md-6">
-			                                        
-		                                            <label>Name of Bill:</label>
-														<input type="text" placeholder="0912092 BC LTD" class="form-control">                                      
-												
-		                                        </div>
 		                                        
-		                                        <div class="col-md-6">
-			                                        
-		                                            <label>Mark + / - :</label>
-														<div class="input-group">
-		                                                    <span class="input-group-addon">$</span>
-		                                                    <input type="text" class="form-control" placeholder="0">
-		                                                    <span class="input-group-addon">.00</span>
-		                                                </div>                                      
-													
-		                                        </div> 
+		                                       
 		                                        
-		                                        <div class="col-md-6">
+		                                        <div class="col-md-4">
 			                                        
 		                                            <label>Final Bill Total:</label>
 														<div class="input-group">
@@ -349,7 +293,7 @@ TPS SOFTWARE
 													
 		                                        </div>  
 		                                        
-		                                        <div class="col-md-6">
+		                                        <div class="col-md-4">
 			                                        
 		                                            <label>Final Bill At:</label>
 														<div class="input-group">
@@ -359,10 +303,21 @@ TPS SOFTWARE
 		                                                </div>                                      
 													
 		                                        </div>  
+		                                        
+		                                         <div class="col-md-4">
+			                                        
+		                                            <label>Mark + / - :</label>
+														<div class="input-group">
+		                                                    <span class="input-group-addon">$</span>
+		                                                    <input type="text" class="form-control" placeholder="0">
+		                                                    <span class="input-group-addon">.00</span>
+		                                                </div>                                      
+													
+		                                        </div> 
 	                                        </div>
                                         </div> 
                                     </fieldset>
-									<br>  <br>
+									<br>  
                                     <fieldset>           
 	                                
 
@@ -401,7 +356,7 @@ TPS SOFTWARE
                                             </div>
                                         
                                     </fieldset>
-                                    <br>  <br>
+                                    <br>  
 									<fieldset>
                                  
 
@@ -454,7 +409,7 @@ TPS SOFTWARE
                                             </div>
                                         </div>
                                     </fieldset>
-                               	<br>  
+                         
                                 </form>
 
             	</div>
@@ -470,22 +425,23 @@ TPS SOFTWARE
                         
                     <div class="content">
                         
-                     	<button class="btn btn-round btn-primary btn-fill"><span class="btn-label btn-label-left">
-                            <i class="fa fa-arrow-left"></i>
-                        </span> Prev
+                     	<button class="btn btn-circle btn-fill btn-primary" rel="tooltip" data-placement="top"  title="Previous" ><span class="btn-label btn-label-left">
+                            <i class="fa fa-arrow-left" ></i>
+                        </span>
                         </button>
-						<button class="btn btn-round btn-primary btn-fill">Next <span class="btn-label btn-label-right">
+						<button class="btn btn-circle btn-fill btn-primary" rel="tooltip" data-placement="top"  title="Next"><span class="btn-label btn-label-right">
                             <i class="fa fa-arrow-right"></i>
                         </span>
                         </button>
-                        <button class="btn btn-round btn-primary btn-fill" onclick="demo.showSwal('success-message')">Save <span class="btn-label btn-label-right">
+                        <button class="btn btn-circle btn-fill btn-primary" onclick="demo.showSwal('success-message')" rel="tooltip" data-placement="top"  title="Save"><span class="btn-label btn-label-right">
                             <i class="fa fa-save"></i>
                         </span>
                         </button>
-                        <button class="btn btn-round btn-danger btn-fill" onclick="demo.showSwal('warning-message-and-confirmation')">Trash <span class="btn-label btn-label-right">
+                        <button class="btn btn-circle btn-fill btn-danger" onclick="demo.showSwal('warning-message-and-confirmation')" rel="tooltip" data-placement="top"  title="Delete"><span class="btn-label btn-label-right">
                             <i class="fa fa-trash"></i>
                         </span>
                         </button>
+                     
 
                           
                     </div>
@@ -508,27 +464,27 @@ TPS SOFTWARE
 
 
                                     <fieldset>
-		                                <legend>Detail Bill<span class="text-muted">- Banana Rep</span> </legend>
+		                                <legend>Detail Bill<span class="text-muted">- Armano</span> </legend>
 		                                
                                       
                                     </fieldset>
                                        <!-- begin table -->  
                                     
                                     <div class="content table-responsive table-full-width" style="display: fixed;max-height: 400px;overflow:auto;padding-left: 15px;padding-right: 15px;">
-                                <table class="table table-hover table-striped table-bordered">
+                                <table class="table table-striped">
                                     <thead>
-                                        <th style="background-color: grey; color: white;">Check</th>
-                                    	<th style="background-color: grey; color: white;">Bill</th>
-                                    	<th style="background-color: grey; color: white;">Employee</th>
-                                    	<th style="background-color: grey; color: white;">Date</th>
-                                    	<th style="background-color: grey; color: white;">W/C</th>
-                                    	<th style="background-color: grey; color: white;">W/C Name</th>
-                                    	<th style="background-color: grey; color: white;">Description</th>
-                                    	<th style="background-color: grey; color: white;">Hours</th>
-                                    	<th style="background-color: grey; color: white;">Amount</th>
-                                    	<th style="background-color: grey; color: white;">Billed</th>
-                                    	<th style="background-color: grey; color: white;">Mark +/-</th>
-                                    	<th style="background-color: grey; color: white;">Bill Status</th>
+                                        <th >Check</th>
+                                    	<th >Bill</th>
+                                    	<th >Employee</th>
+                                    	<th >Date</th>
+                                    	<th >W/C</th>
+                                    	<th >W/C Name</th>
+                                    	<th >Description</th>
+                                    	<th >Hours</th>
+                                    	<th >Amount</th>
+                                    	<th >Billed</th>
+                                    	<th >Mark +/-</th>
+                                    	<th >Bill Status</th>
                                     </thead>
                                     <tbody>
                                         <tr>
@@ -696,7 +652,7 @@ TPS SOFTWARE
                                 </table>
 
 </div><!-- end of table -->
-<!-- bottom part --><br><br>
+<!-- bottom part -->
 <fieldset>
                                        
 
@@ -748,7 +704,7 @@ TPS SOFTWARE
 
                                             </div>
                                         </div>
-                                    </fieldset><BR>
+                                    </fieldset>
 <!-- end of bottom part -->
                                 </form>
                                 
@@ -758,22 +714,26 @@ TPS SOFTWARE
                         
                     <div class="content">
                         
-                     	<button class="btn btn-round btn-primary btn-fill"><span class="btn-label btn-label-left">
-                            <i class="fa fa-arrow-left"></i>
-                        </span> Prev
+                  	<button class="btn btn-circle btn-fill btn-primary" rel="tooltip" data-placement="top"  title="Previous" ><span class="btn-label btn-label-left">
+                            <i class="fa fa-arrow-left" ></i>
+                        </span>
                         </button>
-						<button class="btn btn-round btn-primary btn-fill">Next <span class="btn-label btn-label-right">
+						<button class="btn btn-circle btn-fill btn-primary" rel="tooltip" data-placement="top"  title="Next"><span class="btn-label btn-label-right">
                             <i class="fa fa-arrow-right"></i>
                         </span>
                         </button>
-                        <button class="btn btn-round btn-primary btn-fill" onclick="demo.showSwal('success-message')">Save <span class="btn-label btn-label-right">
+                        <button class="btn btn-circle btn-fill btn-primary" onclick="demo.showSwal('success-message')" rel="tooltip" data-placement="top"  title="Save"><span class="btn-label btn-label-right">
                             <i class="fa fa-save"></i>
                         </span>
                         </button>
-                        <button class="btn btn-round btn-danger btn-fill" onclick="demo.showSwal('warning-message-and-confirmation')">Trash <span class="btn-label btn-label-right">
+                        <button class="btn btn-circle btn-fill btn-danger" onclick="demo.showSwal('warning-message-and-confirmation')" rel="tooltip" data-placement="top"  title="Delete"><span class="btn-label btn-label-right">
                             <i class="fa fa-trash"></i>
                         </span>
                         </button>
+                        <!--  <button style="display: inline-block;float: right;" class="btn btn-circle btn-primary" rel="tooltip" data-placement="top" href="#menu-toggle" id="toggle-close" title="Close"><span class="btn-label btn-label-right">
+                            <i class="fa fa-close"></i>
+                        </span>
+                        </button>-->
 
                           
                     </div>
@@ -801,7 +761,7 @@ TPS SOFTWARE
 
 
                                     <fieldset>
-		                                <legend>Progress Bill<span class="text-muted">- Banana Rep</span> </legend>
+		                                <legend>Progress Bill<span class="text-muted">- Armano</span> </legend>
 		                                <div class="col-sm-12">
                                             <div class="row">
 		                                <h7>BILL AMOUNTS</h7><BR><BR>
@@ -837,7 +797,7 @@ TPS SOFTWARE
                                         </div> 
                                         
                                     </fieldset>
-                                    <br>  <br>
+                                    <br>  
                                     <fieldset>           
 	                              
 
@@ -888,7 +848,7 @@ TPS SOFTWARE
                                     </fieldset>
                                     
                                     
-                                    <br>  <br>
+                                    <br>  
 									<fieldset>
                                         
 
@@ -954,23 +914,23 @@ TPS SOFTWARE
                         
                     <div class="content">
                         
-                     	<button class="btn btn-round btn-primary btn-fill"><span class="btn-label btn-label-left">
-                            <i class="fa fa-arrow-left"></i>
-                        </span> Prev
+                      	<button class="btn btn-circle btn-fill btn-primary" rel="tooltip" data-placement="top"  title="Previous" ><span class="btn-label btn-label-left">
+                            <i class="fa fa-arrow-left" ></i>
+                        </span>
                         </button>
-						<button class="btn btn-round btn-primary btn-fill">Next <span class="btn-label btn-label-right">
+						<button class="btn btn-circle btn-fill btn-primary" rel="tooltip" data-placement="top"  title="Next"><span class="btn-label btn-label-right">
                             <i class="fa fa-arrow-right"></i>
                         </span>
                         </button>
-                        <button class="btn btn-round btn-primary btn-fill" onclick="demo.showSwal('success-message')">Save <span class="btn-label btn-label-right">
+                        <button class="btn btn-circle btn-fill btn-primary" onclick="demo.showSwal('success-message')" rel="tooltip" data-placement="top"  title="Save"><span class="btn-label btn-label-right">
                             <i class="fa fa-save"></i>
                         </span>
                         </button>
-                        <button class="btn btn-round btn-danger btn-fill" onclick="demo.showSwal('warning-message-and-confirmation')">Trash <span class="btn-label btn-label-right">
+                        <button class="btn btn-circle btn-fill btn-danger" onclick="demo.showSwal('warning-message-and-confirmation')" rel="tooltip" data-placement="top"  title="Delete"><span class="btn-label btn-label-right">
                             <i class="fa fa-trash"></i>
                         </span>
                         </button>
-
+                   
                           
                     </div>
                         <br><br><br><br>
@@ -992,7 +952,7 @@ TPS SOFTWARE
 
 
                                     <fieldset>
-		                                <legend>Last 36 Months Report<span class="text-muted">- Banana Rep</span> </legend>
+		                                <legend>Last 36 Months Report<span class="text-muted">- Armano</span> </legend>
 		                                
                                         
                                     </fieldset>
@@ -1000,20 +960,20 @@ TPS SOFTWARE
                                      <!-- begin table -->  
                                     
                                     <div class="content table-responsive table-full-width" style="display: fixed;max-height: 400px;overflow:auto;padding-left: 15px;padding-right: 15px;">
-                                <table class="table table-hover table-striped table-bordered">
+                                <table class="table table-striped">
                                     <thead>
-                                        <th style="background-color: grey; color: white;">Check</th>
-                                    	<th style="background-color: grey; color: white;">Bill</th>
-                                    	<th style="background-color: grey; color: white;">Employee</th>
-                                    	<th style="background-color: grey; color: white;">Date</th>
-                                    	<th style="background-color: grey; color: white;">W/C</th>
-                                    	<th style="background-color: grey; color: white;">W/C Name</th>
-                                    	<th style="background-color: grey; color: white;">Description</th>
-                                    	<th style="background-color: grey; color: white;">Hours</th>
-                                    	<th style="background-color: grey; color: white;">Amount</th>
-                                    	<th style="background-color: grey; color: white;">Billed</th>
-                                    	<th style="background-color: grey; color: white;">Mark +/-</th>
-                                    	<th style="background-color: grey; color: white;">Bill Status</th>
+                                        <th >Check</th>
+                                    	<th >Bill</th>
+                                    	<th >Employee</th>
+                                    	<th >Date</th>
+                                    	<th >W/C</th>
+                                    	<th >W/C Name</th>
+                                    	<th >Description</th>
+                                    	<th >Hours</th>
+                                    	<th >Amount</th>
+                                    	<th >Billed</th>
+                                    	<th >Mark +/-</th>
+                                    	<th >Bill Status</th>
                                     </thead>
                                     <tbody>
                                         <tr>
@@ -1196,20 +1156,20 @@ TPS SOFTWARE
 	                   
 
                         
-                     	<button class="btn btn-round btn-primary btn-fill"><span class="btn-label btn-label-left">
-                            <i class="fa fa-arrow-left"></i>
-                        </span> Prev
+                       	<button class="btn btn-circle btn-fill btn-primary" rel="tooltip" data-placement="top"  title="Previous" ><span class="btn-label btn-label-left">
+                            <i class="fa fa-arrow-left" ></i>
+                        </span>
                         </button>
-                        
-                         <button class="btn btn-round btn-primary btn-fill">Next <span class="btn-label btn-label-right">
+						<button class="btn btn-circle btn-fill btn-primary" rel="tooltip" data-placement="top"  title="Next"><span class="btn-label btn-label-right">
                             <i class="fa fa-arrow-right"></i>
                         </span>
                         </button>
-						
-                        <button class="btn btn-round btn-primary btn-fill">Print <span class="btn-label btn-label-right">
+                        <button class="btn btn-circle btn-fill btn-primary" onclick="demo.showSwal('success-message')" rel="tooltip" data-placement="top"  title="Print"><span class="btn-label btn-label-right">
                             <i class="fa fa-print"></i>
                         </span>
                         </button>
+                       
+                      
                         
 
                           
@@ -1232,7 +1192,7 @@ TPS SOFTWARE
 
 
                                     <fieldset>
-		                                <legend>Billing Paragraphs<span class="text-muted"> - Banana Rep</span></legend>
+		                                <legend>Billing Paragraphs<span class="text-muted"> - Armano</span></legend>
 		                                
                                         
                                     </fieldset>
@@ -1252,128 +1212,204 @@ TPS SOFTWARE
 <br><br>
 <div class="tab-content">
 	<div id="description" class="tab-pane active">
-    <table class="table table-bordered table-hover">
+		
+		
+		<table class="table table-striped">
     <thead>
         <tr>
             <th class="text-center">Date</th>
             <th>Employee</th>
-            <th >Work Code</th>
-            <th class="text-right">Hours</th>
-            <th class="text-right">Amount</th>
-             <th class="text-right">Work Code Description</th>
-            <th class="text-right">Time Entry Description</th>
-           
+            <th>Work Code</th>
+            <th>Hours</th>
+             <th>Amount</th>
+            <th class="text-right">w/c id</th>
+              <th class="text-right">t/e id</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td class="text-center">1/02/2017</td>
+        <tr >
+            <td class="text-center">01/06/17</td>
             <td>Andrew Mike</td>
-            <td>127</td>
-            <td class="text-right">2.00</td>
-            <td class="text-right">$ 99,22</td>
-			<td><label>Work Code Description  <button type="button" rel="tooltip" title="Send Down" class="btn btn-simple btn-xs disabled">
+            <td>456</td>
+            <td>45</td>
+            <td >$ 99,225</td>
+             <td class="text-right" data-toggle="collapse" data-target="#desc" class="accordion-toggle">
+              Lorem ipsum ... <i class="fa fa-caret-down" aria-hidden="true"></i>
 
-                    <i class="fa fa-arrow-down"></i>
+            </td>
+              <td class="text-right" data-toggle="collapse" data-target="#desc2" class="accordion-toggle">
+             Lorem ipsum ... <i class="fa fa-caret-down" aria-hidden="true">
 
-                </button></label><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </td>
-                <td ><label>Time Entry Description  <button type="button" rel="tooltip" title="Send Down" class="btn btn-simple btn-xs disabled">
-
-                    <i class="fa fa-arrow-down"></i>
-
-                </button></label><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </td>
-                
-            </tr>
+            </td>
+        </tr>
         <tr>
+            <td  colspan="7" class="hiddenRow"><div id="desc" class="subtype collapse" data-toggle="collapse" data-target="#subtype2none" class="accordion-toggle">
+	            
+	            <table id="list-tps" class="table table-striped">
+                   
+                      <tbody>
+	                      <tr><td style="padding:15px;">
+                                    
+                                  
+                                   
+                                   <b> Work Code Description: </b> <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                               
+                                    
+								
+								
+                                   
+                                    
+ 
+                                </td><td><i class="fa fa-arrow-circle-down fa-2x"></i></td>
 
-            <td class="text-center">1/02/2017</td>
+                       
+               
+                        </tr>
+                  
+                       	                     
+	                    
+                     <tr>
+            <td colspan="7" class="hiddenRow"><div id="subtype2" class="collapse" style="width: 100px;" > </div></td></tr>
+                    
+                      </tbody>
+               	</table>
+
+	           
+         
+	            </div></td>
+        </tr>   
+	         <tr>
+            <td  colspan="7" class="hiddenRow"><div id="desc2" class="subtype collapse">
+	            
+	            <table id="list-tps" class="table table-striped">
+                   
+                      <tbody>
+	                      <tr><td style="padding:15px;">
+                                    
+                                  
+                                   
+                                    <b> Time Entry Description: </b>  <br>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                               
+                                    
+								
+								
+                                   
+                                    
+ 
+                             </td><td ><i class="fa fa-arrow-circle-down fa-2x"></i></td>                       
+               
+                        </tr>
+                  
+                       	                     
+	                    
+                     <tr>
+            <td colspan="7" class="hiddenRow"><div id="subtype2" class="collapse">sasas</div></td></tr>
+                    
+                      </tbody>
+               	</table>
+
+	           
+         
+	            </div></td>
+        </tr>   
+	        
+       <tr >
+            <td class="text-center">01/06/17</td>
             <td>John Doe</td>
-            <td>890</td>
-            <td class="text-right">1.33</td>
-             <td class="text-right">$ 89,24</td>
-               <td><label>Work Code Description  <button type="button" rel="tooltip" title="Send Down" class="btn btn-simple btn-xs">
+            <td>674</td>
+            <td>42</td>
+            <td >$ 59,225</td>
+             <td class="text-right" data-toggle="collapse" data-target="#desc3" class="accordion-toggle">
+            Lorem ipsum ... <i class="fa fa-caret-down" aria-hidden="true"></i>
 
-                    <i class="fa fa-arrow-down"></i>
+            </td>
+              <td class="text-right" data-toggle="collapse" data-target="#desc4" class="accordion-toggle">
+            Lorem ipsum ... <i class="fa fa-caret-down" aria-hidden="true"></i>
 
-                </button></label><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </td>
-                <td ><label>Time Entry Description  <button type="button" rel="tooltip" title="Send Down" class="btn btn-simple btn-xs">
+            </td>
+        </tr>        
+         <tr>
+            <td  colspan="7" class="hiddenRow"><div id="desc3" class="subtype collapse">
+	            
+	            <table id="list-tps" class="table table-striped">
+                   
+                      <tbody>
+	                      <tr><td style="padding:15px;">
+                                    
+                                  
+                                   
+                                   <b> Work Code Description: </b>  <br>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                               
+                                    
+								
+								
+                                   
+                                    
+ 
+                                </td><td><i class="fa fa-arrow-circle-down fa-2x"></i></td>
 
-                    <i class="fa fa-arrow-down"></i>
+                       
+               
+                        </tr>
+                  
+                       	                     
+	                    
+                     <tr>
+            <td colspan="7" class="hiddenRow"><div id="subtype2" class="collapse">sasas</div></td></tr>
+                    
+                      </tbody>
+               	</table>
 
-                </button></label><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </td>
-                </tr>
-        <tr>
-        <tr>
-            <td class="text-center">1/02/2017</td>
-            <td>Alex Mike</td>
-            <td>122</td>
-            <td class="text-right">0.54</td>
-             <td class="text-right">$ 92,14</td>
-                         <td><label>Work Code Description  <button type="button" rel="tooltip" title="Send Down" class="btn btn-simple btn-xs">
+	           
+         
+	            </div></td>
+        </tr>   
+	         <tr>
+            <td  colspan="7" class="hiddenRow"><div id="desc4" class="subtype collapse">
+	            
+	            <table id="list-tps" class="table table-striped">
+                   
+                      <tbody>
+	                      <tr><td style="padding:15px;">
+                                    
+                                  
+                                   
+                                   <b> Time Entry Description: </b>  <br>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                               
+                                    
+								
+								
+                                   
+                                    
+ 
+                                </td><td><i class="fa fa-arrow-circle-down fa-2x"></i></td>
 
-                    <i class="fa fa-arrow-down"></i>
+                       
+               
+                        </tr>
+                  
+                       	                     
+	                    
+                     <tr>
+            <td colspan="7" class="hiddenRow"><div id="subtype2" class="collapse">sasas</div></td></tr>
+                    
+                      </tbody>
+               	</table>
 
-                </button></label><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </td>
-                <td ><label>Time Entry Description  <button type="button" rel="tooltip" title="Send Down" class="btn btn-simple btn-xs">
-
-                    <i class="fa fa-arrow-down"></i>
-
-                </button></label><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </td></tr>
-        <tr>
-            <td class="text-center">1/02/2017</td>
-            <td>Mike Monday</td>
-            <td>564</td>
-            <td class="text-right">3.00</td>
-            <td class="text-right">$ 92,14</td>
-                       <td><label>Work Code Description  <button type="button" rel="tooltip" title="Send Down" class="btn btn-simple btn-xs">
-
-                    <i class="fa fa-arrow-down"></i>
-
-                </button></label><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </td>
-                <td ><label>Time Entry Description  <button type="button" rel="tooltip" title="Send Down" class="btn btn-simple btn-xs">
-
-                    <i class="fa fa-arrow-down"></i>
-
-                </button></label><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </td></tr>
-    </tbody>
-    
-   
+	           
+         
+	            </div></td>
+        </tr>   
+        
+            </tbody>
 </table>
-<br>
- <fieldset>
-		                                
-		                                <div class="col-sm-12">
-                                            <div class="row">
-		                                <h7>BILLED AMOUNTS</h7><BR><BR>
-			                                   
-		                                        
-		                                        <div class="col-md-6">
-			                                        
-		                                            <label>Billed Amount:</label>
-														<div class="input-group">
-		                                                    <span class="input-group-addon">$</span>
-		                                                    <input type="text" class="form-control" placeholder="1,324">
-		                                                    <span class="input-group-addon">.00</span>
-		                                                </div>                                      
-													
-		                                        </div>  
-		                                        
-		                                        <div class="col-md-6">
-			                                        
-		                                            <label>Amount Remaining:</label>
-														<div class="input-group">
-		                                                    <span class="input-group-addon">$</span>
-		                                                    <input type="text" class="form-control" placeholder="1,324">
-		                                                    <span class="input-group-addon">.00</span>
-		                                                </div>                                      
-													
-		                                        </div>  
-	                                        </div>
-                                        </div> 
-                                    </fieldset>
+
+    
+
+ 
    
-<br><br>
-<table class="table table-bordered table-hover">
+
+<table class="table table-striped">
     <thead>
         <tr>
             <th class="text-center">Number</th>
@@ -1406,9 +1442,41 @@ TPS SOFTWARE
     
    
 </table>
+
+ <fieldset>
+		                                
+		                                <div class="col-sm-12">
+                                            <div class="row">
+		                                <h7>BILLED AMOUNTS</h7><BR><BR>
+			                                   
+		                                        
+		                                        <div class="col-md-6">
+			                                        
+		                                            <label>Billed Amount:</label>
+														<div class="input-group">
+		                                                    <span class="input-group-addon">$</span>
+		                                                    <input type="text" class="form-control" placeholder="1,324">
+		                                                    <span class="input-group-addon">.00</span>
+		                                                </div>                                      
+													
+		                                        </div>  
+		                                        
+		                                        <div class="col-md-6">
+			                                        
+		                                            <label>Amount Remaining:</label>
+														<div class="input-group">
+		                                                    <span class="input-group-addon">$</span>
+		                                                    <input type="text" class="form-control" placeholder="1,324">
+		                                                    <span class="input-group-addon">.00</span>
+		                                                </div>                                      
+													
+		                                        </div>  
+	                                        </div>
+                                        </div> 
+                                    </fieldset>
  </div> 
  <div id="library" class="tab-pane">
-        <table class="table table-bordered table-hover">
+        <table class="table table-striped">
     <thead>
         <tr>
             <th class="text-center">Number</th>
@@ -1446,9 +1514,40 @@ TPS SOFTWARE
     
    
 </table>
+<fieldset>
+		                                
+		                                <div class="col-sm-12">
+                                            <div class="row">
+		                                <h7>BILLED AMOUNTS</h7><BR><BR>
+			                                   
+		                                        
+		                                        <div class="col-md-6">
+			                                        
+		                                            <label>Billed Amount:</label>
+														<div class="input-group">
+		                                                    <span class="input-group-addon">$</span>
+		                                                    <input type="text" class="form-control" placeholder="1,324">
+		                                                    <span class="input-group-addon">.00</span>
+		                                                </div>                                      
+													
+		                                        </div>  
+		                                        
+		                                        <div class="col-md-6">
+			                                        
+		                                            <label>Amount Remaining:</label>
+														<div class="input-group">
+		                                                    <span class="input-group-addon">$</span>
+		                                                    <input type="text" class="form-control" placeholder="1,324">
+		                                                    <span class="input-group-addon">.00</span>
+		                                                </div>                                      
+													
+		                                        </div>  
+	                                        </div>
+                                        </div> 
+                                    </fieldset>
     </div>
     <div id="past-invoices" class="tab-pane">
-        <table class="table table-bordered table-hover">
+        <table class="table table-striped">
     <thead>
         <tr>
             <th class="text-center">Date</th>
@@ -1486,6 +1585,37 @@ TPS SOFTWARE
     
    
 </table>
+<fieldset>
+		                                
+		                                <div class="col-sm-12">
+                                            <div class="row">
+		                                <h7>BILLED AMOUNTS</h7><BR><BR>
+			                                   
+		                                        
+		                                        <div class="col-md-6">
+			                                        
+		                                            <label>Billed Amount:</label>
+														<div class="input-group">
+		                                                    <span class="input-group-addon">$</span>
+		                                                    <input type="text" class="form-control" placeholder="1,324">
+		                                                    <span class="input-group-addon">.00</span>
+		                                                </div>                                      
+													
+		                                        </div>  
+		                                        
+		                                        <div class="col-md-6">
+			                                        
+		                                            <label>Amount Remaining:</label>
+														<div class="input-group">
+		                                                    <span class="input-group-addon">$</span>
+		                                                    <input type="text" class="form-control" placeholder="1,324">
+		                                                    <span class="input-group-addon">.00</span>
+		                                                </div>                                      
+													
+		                                        </div>  
+	                                        </div>
+                                        </div> 
+                                    </fieldset>
     </div>
   </div>  <!-- end billing paragraphs -->   
                                     
@@ -1500,23 +1630,23 @@ TPS SOFTWARE
                         
                     <div class="content">
                         
-                     	<button class="btn btn-round btn-primary btn-fill"><span class="btn-label btn-label-left">
-                            <i class="fa fa-arrow-left"></i>
-                        </span> Prev
+                       	<button class="btn btn-circle btn-fill btn-primary" rel="tooltip" data-placement="top"  title="Previous" ><span class="btn-label btn-label-left">
+                            <i class="fa fa-arrow-left" ></i>
+                        </span>
                         </button>
-						<button class="btn btn-round btn-primary btn-fill ">Next <span class="btn-label btn-label-right">
+						<button class="btn btn-circle btn-fill btn-primary" rel="tooltip" data-placement="top"  title="Next"><span class="btn-label btn-label-right">
                             <i class="fa fa-arrow-right"></i>
                         </span>
                         </button>
-                        <button class="btn btn-round btn-primary btn-fill" onclick="demo.showSwal('success-message')">Save <span class="btn-label btn-label-right">
+                        <button class="btn btn-circle btn-fill btn-primary" onclick="demo.showSwal('success-message')" rel="tooltip" data-placement="top"  title="Save"><span class="btn-label btn-label-right">
                             <i class="fa fa-save"></i>
                         </span>
                         </button>
-                        <button class="btn btn-round btn-danger btn-fill" onclick="demo.showSwal('warning-message-and-confirmation')">Trash <span class="btn-label btn-label-right">
+                        <button class="btn btn-circle btn-fill btn-danger" onclick="demo.showSwal('warning-message-and-confirmation')" rel="tooltip" data-placement="top"  title="Delete"><span class="btn-label btn-label-right">
                             <i class="fa fa-trash"></i>
                         </span>
                         </button>
-
+                     
                           
                     </div>
                         <br><br><br><br>
@@ -1557,28 +1687,24 @@ TPS SOFTWARE
                             </div>
                             
 
-            
-                            
-                            
-<table id="list-tps" class="table table-striped table-hover" style="border-collapse:collapse;" >
-    <thead>
-        <tr>
-            <th style="padding-left: 10px;"><h6>Label</h6></th>
-            <th data-sortable="true"><h6>Unbilled</h6></th>
-            <th data-sortable="true"><h6>Client ID</h6></th>
-            <th data-sortable="true"><h6>Client Name</h6></th>
-             
-            
-        </tr>
-    </thead>
-   
-    <tbody>
-	    
-
-
-   <tr >
-            <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_yellow.png"></td>
-            <td><div class="dropdown">
+        <div ng-app="app">
+  <div class="container">
+    <div class="row">
+      <div class="col-med-12">
+        <table adjustable-column class="table table-striped table-hover" style="margin-left: 15px;">
+          <thead>
+            <tr>
+              <th>LABEL</th>
+              <th class="description">UNBILLED</th>
+              <th>CLIENT ID</th>
+              <th>CLIENT NAME</th>
+      
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-toggle="collapse" data-target="#subtype1" class="accordion-toggle">
+              <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_yellow.png"></td>
+              <td class="description"><div class="dropdown">
 
   <div class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"><strong>$23,789</strong> <span class="caret"></span>
 
@@ -1588,10 +1714,15 @@ TPS SOFTWARE
 
     <li role="presentation"><a role="menuitem" tabindex="-1" href="#menu-toggle" id="toggle1">Quick Bill</a></li>
 
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#menu-toggle" id="detailbill">Detail Bill</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#menu-toggle" id="toggle2">Detail Bill</a></li>
 
     <li role="presentation"><a role="menuitem" tabindex="-1" href="#menu-toggle" id="toggle3">Progress Bill</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Provisional Mark</a></li>
+    
+    
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#menu-toggle" id="toggle4">Last 36</a></li>
+
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#menu-toggle" id="toggle5">Billing Paragraphs</a></li>
+
 
     <li role="presentation" class="divider"></li>
 
@@ -1602,219 +1733,229 @@ TPS SOFTWARE
   </ul>
 
 </div></td>
-            <td class="text-muted">AW2-09120</td>
-            <td class="text-important">Armano </td>
-              
-         
-        </tr>
- 
- 
- 
- 
+              <td class="text-muted">AW2-09120</td>
+              <td class="text-important">Armano</td>
 
-     
+            </tr>
+             <tr>
+            <td  colspan="6" class="hiddenRow"><div id="subtype1" class="subtype collapse">
+	            
+	            <table id="list-tps" class="table table-condensed" style="border-collapse:collapse;text-indent: 6%;">
+                   
+                      <tbody>
+	                      <tr><div class="relevant-info text-muted">
+                                    
+                                    <span>
+                                    <div class="col-xs-6"><b> Current billed: </b> $1,324.56 </div> <div class="col-xs-6"><b> Mark + / - : </b> $324.56 </div>
+                                    <div class="col-xs-6"> <b> YTD billed: </b> $1,324.56  </div> <div class="col-xs-6"><b>  Mark + / - : </b> $324.56</div>
+                                    <div class="col-xs-6"> <b> LY billed: </b> $1,324.56  </div> <div class="col-xs-6"><b>  Mark + / - : </b> $324.56</div>
+                                    <div class="col-xs-6"> <b> LM billed: </b> $1,324.56  </div> <div class="col-xs-6"><b>  Mark + / - : </b> $324.56</div>
+									<div class="col-xs-12">&nbsp;</div> 
+                                    <div class="col-xs-12"><b> Total: </b> $1,324.56 </div> 
+                                    <div class="col-xs-12"> <b> Last payment date: </b> 03/01/17 </div> 
+                                    <div class="col-xs-12"> <b> Last invoice date: </b> 23/02/17   </div> 
+								
+                                    </span>
+                                    
+ 
+                                </div>
+</td>
+                       
+               
+                        </tr>
+                  
+                       	                     
+	                    
+                     <tr>
+            <td colspan="6" class="hiddenRow"><div id="subtype2" class="collapse">sasas</div></td></tr>
+                    
+                      </tbody>
+               	</table>
+	           
+         
+	            </div></td>
+        </tr>   
 	        
-	       	        
-        
-       
-        <tr data-toggle="collapse"  data-target="#demo3" class="accordion-toggle">
-            <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_orange.png"></td>
-            <td><strong>$36,738</strong></td>
-            <td class="text-muted">AW2-09120</td>
-            <td class="text-important">Banana rep.</td>
-              
-       
-        </tr>
-        
-        
-        <tr data-toggle="collapse"  data-target="#demo3" class="accordion-toggle">
-            <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_orange.png"></td>
-            <td><strong>$36,738</strong></td>
-            <td class="text-muted">AW2-09120</td>
-            <td class="text-important">Banana rep.</td>
-               
-       
-        </tr>
+            
+            <tr>
+              <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_blue.png"></td>
+              <td><strong>$36,738</strong></td>
+              <td class="text-muted">AW2-09120</td>
+              <td class="text-important">Armano</td>
+
+            </tr>
+             <tr>
+              <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_blue.png"></td>
+              <td><strong>$36,738</strong></td>
+              <td class="text-muted">AW2-09120</td>
+              <td class="text-important">Armano</td>
+
+            </tr>
+
+ <tr>
+              <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_purple.png"></td>
+              <td><strong>$36,738</strong></td>
+              <td class="text-muted">AW2-09120</td>
+              <td class="text-important">Armano</td>
+
+            </tr>
+
+ <tr>
+              <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_red.png"></td>
+              <td><strong>$36,738</strong></td>
+              <td class="text-muted">AW2-09120</td>
+              <td class="text-important">Armano</td>
+
+            </tr>
+
+ <tr>
+              <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_purple.png"></td>
+              <td><strong>$36,738</strong></td>
+              <td class="text-muted">AW2-09120</td>
+              <td class="text-important">Armano</td>
+
+            </tr>
+
+ <tr>
+              <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_yellow.png"></td>
+              <td><strong>$36,738</strong></td>
+              <td class="text-muted">AW2-09120</td>
+              <td class="text-important">Armano</td>
+
+            </tr>
+              <tr>
+              <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_yellow.png"></td>
+              <td><strong>$36,738</strong></td>
+              <td class="text-muted">AW2-09120</td>
+              <td class="text-important">Armano</td>
+
+            </tr>
+             <tr>
+              <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_orange.png"></td>
+              <td><strong>$36,738</strong></td>
+              <td class="text-muted">AW2-09120</td>
+              <td class="text-important">Armano</td>
+
+            </tr>
+
+ <tr>
+              <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_red.png"></td>
+              <td><strong>$36,738</strong></td>
+              <td class="text-muted">AW2-09120</td>
+              <td class="text-important">Armano</td>
+
+            </tr>
+
+ <tr>
+              <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_purple.png"></td>
+              <td><strong>$36,738</strong></td>
+              <td class="text-muted">AW2-09120</td>
+              <td class="text-important">Armano</td>
+
+            </tr>
+
+ <tr>
+              <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_purple.png"></td>
+              <td><strong>$36,738</strong></td>
+              <td class="text-muted">AW2-09120</td>
+              <td class="text-important">Armano</td>
+
+            </tr>
+
+ <tr>
+              <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_yellow.png"></td>
+              <td><strong>$36,738</strong></td>
+              <td class="text-muted">AW2-09120</td>
+              <td class="text-important">Armano</td>
+
+            </tr>
+              <tr>
+              <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_blue.png"></td>
+              <td><strong>$36,738</strong></td>
+              <td class="text-muted">AW2-09120</td>
+              <td class="text-important">Armano</td>
+
+            </tr>
+             <tr>
+              <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_orange.png"></td>
+              <td><strong>$36,738</strong></td>
+              <td class="text-muted">AW2-09120</td>
+              <td class="text-important">Armano</td>
+
+            </tr>
+
+ <tr>
+              <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_orange.png"></td>
+              <td><strong>$36,738</strong></td>
+              <td class="text-muted">AW2-09120</td>
+              <td class="text-important">Armano</td>
+
+            </tr>
+
+ <tr>
+              <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_purple.png"></td>
+              <td><strong>$36,738</strong></td>
+              <td class="text-muted">AW2-09120</td>
+              <td class="text-important">Armano</td>
+
+            </tr>
+
+ <tr>
+              <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_red.png"></td>
+              <td><strong>$36,738</strong></td>
+              <td class="text-muted">AW2-09120</td>
+              <td class="text-important">Armano</td>
+
+            </tr>
+
+ <tr>
+              <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_orange.png"></td>
+              <td><strong>$36,738</strong></td>
+              <td class="text-muted">AW2-09120</td>
+              <td class="text-important">Armano</td>
+
+            </tr>
+            
+            <tr>
+              <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_red.png"></td>
+              <td><strong>$36,738</strong></td>
+              <td class="text-muted">AW2-09120</td>
+              <td class="text-important">Armano</td>
+
+            </tr>
+
+ <tr>
+              <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_purple.png"></td>
+              <td><strong>$36,738</strong></td>
+              <td class="text-muted">AW2-09120</td>
+              <td class="text-important">Armano</td>
+
+            </tr>
+
+ <tr>
+              <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_purple.png"></td>
+              <td><strong>$36,738</strong></td>
+              <td class="text-muted">AW2-09120</td>
+              <td class="text-important">Armano</td>
+
+            </tr>
+
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.min.js'></script>
+
+    <script src="../assets/js/rcols.js"></script>
+          <script src="js/index.js"></script>
+   
       
-        <tr data-toggle="collapse"  data-target="#demo3" class="accordion-toggle">
-            <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_purple.png"></td>
-            <td><strong>$36,738</strong></td>
-            <td class="text-muted">AW2-09120</td>
-            <td class="text-important">Banana rep.</td>
-               
-       
-        </tr>
-        <tr data-toggle="collapse"  data-target="#demo3" class="accordion-toggle">
-            <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_blue.png"></td>
-            <td><strong>$36,738</strong></td>
-            <td class="text-muted">AW2-09120</td>
-            <td class="text-important">Banana rep.</td>
-               
-       
-        </tr>
-        <tr data-toggle="collapse"  data-target="#demo3" class="accordion-toggle">
-            <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_purple.png"></td>
-            <td><strong>$36,738</strong></td>
-            <td class="text-muted">AW2-09120</td>
-            <td class="text-important">Banana rep.</td>
-               
-       
-        </tr>
-        <tr data-toggle="collapse"  data-target="#demo3" class="accordion-toggle">
-            <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_orange.png"></td>
-            <td><strong>$36,738</strong></td>
-            <td class="text-muted">AW2-09120</td>
-            <td class="text-important">Banana rep.</td>
-              
-       
-        </tr>
-        <tr data-toggle="collapse"  data-target="#demo3" class="accordion-toggle">
-            <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_red.png"></td>
-            <td><strong>$36,738</strong></td>
-            <td class="text-muted">AW2-09120</td>
-            <td class="text-important">Banana rep.</td>
-             
-       
-        </tr>
-        <tr data-toggle="collapse"  data-target="#demo3" class="accordion-toggle">
-            <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_blue.png"></td>
-            <td><strong>$36,738</strong></td>
-            <td class="text-muted">AW2-09120</td>
-            <td class="text-important">Banana rep.</td>
-              
-       
-        </tr>
-        <tr data-toggle="collapse"  data-target="#demo3" class="accordion-toggle">
-            <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_orange.png"></td>
-            <td><strong>$36,738</strong></td>
-            <td class="text-muted">AW2-09120</td>
-            <td class="text-important">Banana rep.</td>
-              
-       
-        </tr>
-        <tr data-toggle="collapse"  data-target="#demo3" class="accordion-toggle">
-            <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_red.png"></td>
-            <td><strong>$36,738</strong></td>
-            <td class="text-muted">AW2-09120</td>
-            <td class="text-important">Banana rep.</td>
-              
-       
-        </tr>
-        <tr data-toggle="collapse"  data-target="#demo3" class="accordion-toggle">
-            <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_purple.png"></td>
-            <td><strong>$36,738</strong></td>
-            <td class="text-muted">AW2-09120</td>
-            <td class="text-important">Banana rep.</td>
-               
-       
-        </tr>
-        <tr data-toggle="collapse"  data-target="#demo3" class="accordion-toggle">
-            <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_blue.png"></td>
-            <td><strong>$36,738</strong></td>
-            <td class="text-muted">AW2-09120</td>
-            <td class="text-important">Banana rep.</td>
-               
-       
-        </tr>
-        <tr data-toggle="collapse"  data-target="#demo3" class="accordion-toggle">
-            <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_blue.png"></td>
-            <td><strong>$36,738</strong></td>
-            <td class="text-muted">AW2-09120</td>
-            <td class="text-important">Banana rep.</td>
-               
-       
-        </tr>
-        <tr data-toggle="collapse"  data-target="#demo3" class="accordion-toggle">
-            <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_red.png"></td>
-            <td><strong>$36,738</strong></td>
-            <td class="text-muted">AW2-09120</td>
-            <td class="text-important">Banana rep.</td>
-              
-       
-        </tr>
-        <tr data-toggle="collapse"  data-target="#demo3" class="accordion-toggle">
-            <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_blue.png"></td>
-            <td><strong>$36,738</strong></td>
-            <td class="text-muted">AW2-09120</td>
-            <td class="text-important">Banana rep.</td>
-               
-       
-        </tr>
-        <tr data-toggle="collapse"  data-target="#demo3" class="accordion-toggle">
-            <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_purple.png"></td>
-            <td><strong>$36,738</strong></td>
-            <td class="text-muted">AW2-09120</td>
-            <td class="text-important">Banana rep.</td>
-               
-       
-        </tr>
-   <tr data-toggle="collapse"  data-target="#demo3" class="accordion-toggle">
-            <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_orange.png"></td>
-            <td><strong>$36,738</strong></td>
-            <td class="text-muted">AW2-09120</td>
-            <td class="text-important">Banana rep.</td>
-              
-       
-        </tr>
-        <tr data-toggle="collapse"  data-target="#demo3" class="accordion-toggle">
-            <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_red.png"></td>
-            <td><strong>$36,738</strong></td>
-            <td class="text-muted">AW2-09120</td>
-            <td class="text-important">Banana rep.</td>
-              
-       
-        </tr>
-        <tr data-toggle="collapse"  data-target="#demo3" class="accordion-toggle">
-            <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_purple.png"></td>
-            <td><strong>$36,738</strong></td>
-            <td class="text-muted">AW2-09120</td>
-            <td class="text-important">Banana rep.</td>
-               
-       
-        </tr>
-        <tr data-toggle="collapse"  data-target="#demo3" class="accordion-toggle">
-            <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_blue.png"></td>
-            <td><strong>$36,738</strong></td>
-            <td class="text-muted">AW2-09120</td>
-            <td class="text-important">Banana rep.</td>
-               
-       
-        </tr>
-        <tr data-toggle="collapse"  data-target="#demo3" class="accordion-toggle">
-            <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_blue.png"></td>
-            <td><strong>$36,738</strong></td>
-            <td class="text-muted">AW2-09120</td>
-            <td class="text-important">Banana rep.</td>
-               
-       
-        </tr>
-        <tr data-toggle="collapse"  data-target="#demo3" class="accordion-toggle">
-            <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_red.png"></td>
-            <td><strong>$36,738</strong></td>
-            <td class="text-muted">AW2-09120</td>
-            <td class="text-important">Banana rep.</td>
-              
-       
-        </tr>
-        <tr data-toggle="collapse"  data-target="#demo3" class="accordion-toggle">
-            <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_blue.png"></td>
-            <td><strong>$36,738</strong></td>
-            <td class="text-muted">AW2-09120</td>
-            <td class="text-important">Banana rep.</td>
-               
-       
-        </tr>
-        <tr data-toggle="collapse"  data-target="#demo3" class="accordion-toggle">
-            <td style="padding-left: 10px;"><img src="../assets/images/icon_circle_small_purple.png"></td>
-            <td><strong>$36,738</strong></td>
-            <td class="text-muted">AW2-09120</td>
-            <td class="text-important">Banana rep.</td>
-               
-       
-        </tr>
-       
-    </tbody>
-</table>
+
+                            
+
                         
                     </div> <!-- end col-md-12 -->
 

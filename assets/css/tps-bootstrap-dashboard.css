@@ -38,6 +38,27 @@
 
 /** Button Code **/
 
+.relevant-info {
+ padding: 1%;
+ padding-bottom: 17px;
+overflow:auto;
+ webkit-font-smoothing: antialiased;
+    font-family: "Roboto","Helvetica Neue",Arial,sans-serif;
+    font-weight: 400;
+      font-size: 14px;
+   background-color: lightyellow; 
+
+ }
+.btn-circle {
+  width: 50px;
+  height: 50px;
+  text-align: left;
+
+  font-size: 20px;
+  line-height: 1.00;
+  border-radius: 30px;
+}
+
 .button {
   width: 45px;
   height: 45px;
@@ -87,20 +108,53 @@
    text-align: left !important;
 
 }
+table {
+
+}
+table td {
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+table  th {
+  position: relative;
+}
+table tbody tr:hover {
+  background-color: lightyellow !important;
+}
+table tbody tr.selected:nth-child(-n+185) {
+  background-color: lightyellow !important;
+}
+
+table[adjustable-column] .handle {
+  width: 6px;
+  position:absolute;
+  top:0;
+  bottom:0;
+  right: -3px;
+  cursor: col-resize;
+  z-index:1;
+}
 
 
 #list-tps tbody tr:hover{
   background-color: lightyellow; 
    padding: 0 !important; 
+   height: 100%;
+     position: relative
 
 }
 
 #list-tps tbody tr.selected:nth-child(-n+185) {
      background-color: lightyellow; 
+   padding: 0 !important; 
+   height: 100%;
+     position: relative
  
     /* border-left: 5px solid #379AFF; */
 
 }
+
 .hiddenRow {
     padding: 0 !important;
 }
@@ -130,7 +184,7 @@
                 transition: all 0.5s ease;
             }
             #wrapper.toggled {   
-                padding-right: 58%;
+                 width: calc(100% - 58%);
             }
      
 			#wrapperfull {
@@ -156,15 +210,17 @@
                 height: 100%; 
                 margin-right: 0;
                 overflow-y: auto;
-                background: #050545;
+                background: #ffffff;
                 -webkit-transition: all 0.5s ease;
                 -moz-transition: all 0.5s ease;
                 -o-transition: all 0.5s ease;
                 transition: all 0.5s ease;   
+                  
             }
             #wrapper.toggled #sidebar-wrapper {
                  width: calc(100% - 50%);
                  border-left: 1px solid #fafafa; 
+                 
                  
                  
             }
@@ -321,6 +377,7 @@ right 0px;
 }
 .show-pane--right .main {
   right: 560px;
+
    
 
 }
@@ -4635,6 +4692,8 @@ h1 .subtitle {
 .sidebar .sidebar-wrapper .dropdown .dropdown-backdrop {
   display: none !important;
   }
+  
+
 
 .sidebar .sidebar-background {
 
