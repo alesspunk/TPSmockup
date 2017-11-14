@@ -65,6 +65,13 @@
             $("#wrapper").toggleClass("toggled");
             });
             
+              $("#toggle-close11").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+            });
+            
+            
+            
               $("#toggle-finish").click(function(e) {
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
